@@ -1,17 +1,15 @@
-#include <vector>
+#include <array>
 #include <fstream>
 #include <iostream>
 
 using namespace std;
-vector<int> l()
+auto l()
 {
-    vector<int> x;
+    array<int, 200> x;
     ifstream f("f");
-    while(f.good())
-    {   
-        int d;
+    for(int& d : x)
+    {
         f >> d;
-        x.push_back(d);
     }
     return x;
 }
